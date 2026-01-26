@@ -33,12 +33,13 @@
         .logo { font-size: 24px; font-weight: 900; letter-spacing: 3px; }
         .logo span { color: var(--accent); }
 
-        /* Main Featured Video/Model Section */
-        .container { width: 92%; max-width: 500px; margin-bottom: 40px; }
+        /* Main Container - Adjusted for a smaller video feel */
+        .container { width: 92%; max-width: 400px; margin-bottom: 40px; }
 
         .video-wrapper {
             width: 100%;
-            padding-bottom: 177.7%; /* 9:16 Ratio */
+            /* Lowered height ratio from 177% to 150% to make it physically smaller */
+            padding-bottom: 150%; 
             position: relative;
             background: #111;
             border-radius: 20px;
@@ -51,7 +52,7 @@
         }
 
         /* Menu Gallery Section */
-        .menu-title { font-size: 22px; font-weight: 700; width: 92%; margin-bottom: 20px; }
+        .menu-title { font-size: 22px; font-weight: 700; width: 92%; margin-bottom: 20px; text-align: left; }
 
         .menu-card {
             background: var(--card-bg);
@@ -77,7 +78,6 @@
         .info-area p { color: var(--text-dim); font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
 
         .allergen-icons { display: flex; gap: 10px; margin-bottom: 20px; }
-        .allergen { width: 20px; height: 20px; opacity: 0.6; }
 
         /* AR Buttons */
         .btn-ar {
@@ -91,11 +91,10 @@
             text-align: center;
             font-size: 14px;
             transition: transform 0.2s;
+            cursor: pointer;
+            border: none;
         }
         .btn-ar:active { transform: scale(0.95); }
-
-        /* Hide the actual 3D viewer for the images to save memory */
-        .hidden-viewer { display: none; }
     </style>
 </head>
 <body>
@@ -128,7 +127,7 @@
         <div class="menu-title">Premium Gallery</div>
 
         <div class="menu-card">
-            <div class="image-area" style="background-image: url('tapas23_preview.jpg');"></div>
+            <div class="image-area" style="background-image: url('https://raw.githubusercontent.com/Flashvedder/MoloneyAR/main/Tapas23_.webp');"></div>
             <div class="info-area">
                 <h3>Tapas 23: Patatas Bravas</h3>
                 <p>Crispy hand-cut potatoes topped with a spicy tomato brava sauce and creamy garlic aioli.</p>
@@ -138,27 +137,27 @@
                     ar ar-modes="webxr scene-viewer quick-look" 
                     style="display:none;" id="mv-tapas">
                 </model-viewer>
-                <a href="#" class="btn-ar" onclick="document.querySelector('#mv-tapas').activateAR(); return false;">VIEW IN AR</a>
+                <button class="btn-ar" onclick="document.querySelector('#mv-tapas').activateAR()">VIEW IN AR</button>
             </div>
         </div>
 
         <div class="menu-card">
-            <div class="image-area" style="background-image: url('kebab_preview.jpg');"></div>
+            <div class="image-area" style="background-image: url('https://raw.githubusercontent.com/Flashvedder/MoloneyAR/main/Kebab_Durum_poster.webp');"></div>
             <div class="info-area">
                 <h3>Gourmet Durum Kebab</h3>
                 <p>Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread with yogurt sauce.</p>
                 
                 <model-viewer 
                     src="https://flashvedder.github.io/Durum_Kebab/Durum_Kebab.glb" 
-                    ar ar-modes="webxr scene-viewer poster.webp" 
+                    ar ar-modes="webxr scene-viewer quick-look" 
                     style="display:none;" id="mv-kebab">
                 </model-viewer>
-                <a href="#" class="btn-ar" onclick="document.querySelector('#mv-kebab').activateAR(); return false;">VIEW IN AR</a>
+                <button class="btn-ar" onclick="document.querySelector('#mv-kebab').activateAR()">VIEW IN AR</button>
             </div>
         </div>
 
         <div class="menu-card">
-            <div class="image-area" style="background-image: url('sands_preview.jpg');"></div>
+            <div class="image-area" style="background-image: url('https://raw.githubusercontent.com/Flashvedder/MoloneyAR/main/The%20Sands_Bravas_poster.webp');"></div>
             <div class="info-area">
                 <h3>The Sands: Bravas</h3>
                 <p>Triple-cooked potatoes with a smoky Mediterranean paprika sauce. A beachside classic.</p>
@@ -168,12 +167,10 @@
                     ar ar-modes="webxr scene-viewer quick-look" 
                     style="display:none;" id="mv-sands">
                 </model-viewer>
-                <a href="#" class="btn-ar" onclick="document.querySelector('#mv-sands').activateAR(); return false;">VIEW IN AR</a>
+                <button class="btn-ar" onclick="document.querySelector('#mv-sands').activateAR()">VIEW IN AR</button>
             </div>
         </div>
     </div>
 
 </body>
 </html>
-
-
