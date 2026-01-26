@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moloney AR | Next-Gen Digital Menus</title>
 
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
 <style>
 :root {
     --bg-color:#000;
@@ -62,29 +60,24 @@ header {
     flex-direction:column;
 }
 
-/* This makes the 3D area exactly like the burger's setup */
-.viewer-container {
-    height: 250px;
+/* Container for the 3D iFrame */
+.viewer-frame-area {
     width: 100%;
+    height: 350px; /* Slightly taller to ensure AR buttons aren't cut off */
+    background: #000;
+}
+
+.viewer-frame-area iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .info-area{padding:20px;}
 .info-area h3{margin:0 0 8px;font-size:20px;}
-.info-area p{color:var(--text-dim);font-size:14px;line-height:1.5;margin-bottom:15px;}
+.info-area p{color:var(--text-dim);font-size:14px;line-height:1.5;}
 
-.btn-ar{
-    display:inline-block;
-    background:var(--accent);
-    color:#000;
-    padding:12px 24px;
-    border-radius:50px;
-    font-weight:700;
-    text-decoration:none;
-    text-align:center;
-    font-size:14px;
-    border:none;
-    cursor:pointer;
-}
+.allergen-icons { margin-top: 10px; font-size: 18px; }
 </style>
 </head>
 
@@ -101,32 +94,21 @@ header {
     </div>
     
     <div class="menu-card" style="border-color: var(--accent);">
-        <div class="viewer-container">
-            <model-viewer 
-                src="https://flashvedder.github.io/Shazan_Burger/Shazan_Burger.glb" 
-                ar camera-controls auto-rotate shadow-intensity="1"
-                touch-action="pan-y"
-                style="width: 100%; height: 100%; background: #0a0a0a;">
-                <button slot="ar-button" class="btn-ar" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">EXPERIENCE IN YOUR ROOM</button>
-            </model-viewer>
+        <div class="viewer-frame-area">
+            <iframe src="https://flashvedder.github.io/Shazan_Burger/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
         </div>
         <div class="info-area">
             <h3>Shazan Signature Burger</h3>
-            <p>Black Angus beef, melted cheddar, caramelized onions, and our secret Shazan sauce on a toasted brioche bun.</p>
+            <p>Black Angus beef, melted cheddar, caramelized onions, and our secret Shazan sauce.</p>
+            <div class="allergen-icons">🌱 🥛 🍞</div>
         </div>
     </div>
     
     <div class="menu-title">Premium Gallery</div>
 
     <div class="menu-card">
-        <div class="viewer-container">
-            <model-viewer 
-                src="https://flashvedder.github.io/Tapas23_Bravas/Tapas23_Bravas.glb" 
-                ar camera-controls auto-rotate shadow-intensity="1"
-                touch-action="pan-y"
-                style="width: 100%; height: 100%; background: #0a0a0a;">
-                <button slot="ar-button" class="btn-ar" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">EXPERIENCE IN YOUR ROOM</button>
-            </model-viewer>
+        <div class="viewer-frame-area">
+            <iframe src="https://flashvedder.github.io/Tapas23_Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
         </div>
         <div class="info-area">
             <h3>Tapas 23: Patatas Bravas</h3>
@@ -135,30 +117,18 @@ header {
     </div>
 
     <div class="menu-card">
-        <div class="viewer-container">
-            <model-viewer 
-                src="https://flashvedder.github.io/Durum_Kebab/Durum_Kebab.glb" 
-                ar camera-controls auto-rotate shadow-intensity="1"
-                touch-action="pan-y"
-                style="width: 100%; height: 100%; background: #0a0a0a;">
-                <button slot="ar-button" class="btn-ar" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">EXPERIENCE IN YOUR ROOM</button>
-            </model-viewer>
+        <div class="viewer-frame-area">
+            <iframe src="https://flashvedder.github.io/Durum_Kebab/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
         </div>
         <div class="info-area">
             <h3>Gourmet Durum Kebab</h3>
-            <p>Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread with yogurt sauce.</p>
+            <p>Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread.</p>
         </div>
     </div>
 
     <div class="menu-card">
-        <div class="viewer-container">
-            <model-viewer 
-                src="https://flashvedder.github.io/The-Sands-Bravas/The-Sands-Bravas.glb" 
-                ar camera-controls auto-rotate shadow-intensity="1"
-                touch-action="pan-y"
-                style="width: 100%; height: 100%; background: #0a0a0a;">
-                <button slot="ar-button" class="btn-ar" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">EXPERIENCE IN YOUR ROOM</button>
-            </model-viewer>
+        <div class="viewer-frame-area">
+            <iframe src="https://flashvedder.github.io/The-Sands-Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
         </div>
         <div class="info-area">
             <h3>The Sands: Bravas</h3>
