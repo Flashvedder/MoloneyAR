@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moloney AR | Next-Gen Digital Menus</title>
 
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 <style>
 :root {
     --bg-color:#000;
@@ -109,10 +111,12 @@ header {
 <h3>Tapas 23: Patatas Bravas</h3>
 <p>Crispy hand-cut potatoes topped with a spicy tomato brava sauce and creamy garlic aioli.</p>
 
-<a class="btn-ar" href="https://flashvedder.github.io/Tapas23_Bravas/" target="_blank">
-VIEW IN AR
-</a>
+<model-viewer id="mv-tapas"
+src="https://flashvedder.github.io/Tapas23_Bravas/Tapas23_Bravas.glb"
+ar ar-modes="webxr scene-viewer quick-look"
+style="width:1px;height:1px;position:absolute;opacity:0;"></model-viewer>
 
+<button class="btn-ar" onclick="launchAR('mv-tapas')">VIEW IN AR</button>
 </div>
 </div>
 
@@ -123,10 +127,12 @@ VIEW IN AR
 <h3>Gourmet Durum Kebab</h3>
 <p>Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread with yogurt sauce.</p>
 
-<a class="btn-ar" href="https://flashvedder.github.io/Durum_Kebab/" target="_blank">
-VIEW IN AR
-</a>
+<model-viewer id="mv-kebab"
+src="https://flashvedder.github.io/Durum_Kebab/Durum_Kebab.glb"
+ar ar-modes="webxr scene-viewer quick-look"
+style="width:1px;height:1px;position:absolute;opacity:0;"></model-viewer>
 
+<button class="btn-ar" onclick="launchAR('mv-kebab')">VIEW IN AR</button>
 </div>
 </div>
 
@@ -137,14 +143,27 @@ VIEW IN AR
 <h3>The Sands: Bravas</h3>
 <p>Triple-cooked potatoes with a smoky Mediterranean paprika sauce. A beachside classic.</p>
 
-<a class="btn-ar" href="https://flashvedder.github.io/The-Sands-Bravas/" target="_blank">
-VIEW IN AR
-</a>
+<model-viewer id="mv-sands"
+src="https://flashvedder.github.io/The-Sands-Bravas/The-Sands-Bravas.glb"
+ar ar-modes="webxr scene-viewer quick-look"
+style="width:1px;height:1px;position:absolute;opacity:0;"></model-viewer>
+
+<button class="btn-ar" onclick="launchAR('mv-sands')">VIEW IN AR</button>
+</div>
+</div>
 
 </div>
-</div>
 
-</div>
+<script>
+function launchAR(id){
+    const viewer = document.getElementById(id);
+    if(viewer && viewer.activateAR){
+        viewer.activateAR();
+    } else {
+        alert("AR not supported on this device");
+    }
+}
+</script>
 
 </body>
 </html>
