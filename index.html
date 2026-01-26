@@ -28,8 +28,18 @@ header {
     padding:40px 20px;
     text-align:center;
 }
-.logo{font-size:24px;font-weight:900;letter-spacing:3px;}
+.logo{font-size:26px;font-weight:900;letter-spacing:3px;margin-bottom:10px;}
 .logo span{color:var(--accent);}
+
+.contact-info {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+.contact-info a {
+    color: var(--accent);
+    text-decoration: none;
+}
 
 .container{width:92%;max-width:400px;margin-bottom:40px;}
 
@@ -60,10 +70,9 @@ header {
     flex-direction:column;
 }
 
-/* Container for the 3D iFrame */
 .viewer-frame-area {
     width: 100%;
-    height: 350px; /* Slightly taller to ensure AR buttons aren't cut off */
+    height: 350px;
     background: #000;
 }
 
@@ -77,16 +86,34 @@ header {
 .info-area h3{margin:0 0 8px;font-size:20px;}
 .info-area p{color:var(--text-dim);font-size:14px;line-height:1.5;}
 
-.allergen-icons { margin-top: 10px; font-size: 18px; }
+.services-box {
+    background: #111;
+    border: 1px dashed #444;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.services-box h2 { color: var(--accent); font-size: 18px; margin-top: 0; }
+.services-box ul { padding-left: 20px; color: var(--text-dim); font-size: 14px; }
+.services-box li { margin-bottom: 8px; }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">MOLONEY <span>AR</span></div>
+    <div class="logo">MOLONEY <span>AR</span></div>
+    <div class="contact-info">
+        <a href="tel:+34665265068">+34 665 26 50 68</a><br>
+        <a href="mailto:owenbmoloney@gmail.com">owenbmoloney@gmail.com</a>
+    </div>
 </header>
 
+<div class="tagline-main">Revolutionizing Dining with Augmented Reality</div>
+    <div class="tagline-sub">The Sustainable, Eco-Friendly Evolution of the Traditional Menu</div>
+
+    <div class="contact-info">
 <div class="container">
 
     <div class="video-wrapper">
@@ -100,7 +127,6 @@ header {
         <div class="info-area">
             <h3>Shazan Signature Burger</h3>
             <p>Black Angus beef, melted cheddar, caramelized onions, and our secret Shazan sauce.</p>
-            <div class="allergen-icons">🌱 🥛 🍞</div>
         </div>
     </div>
     
@@ -126,14 +152,19 @@ header {
         </div>
     </div>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/The-Sands-Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
-        </div>
-        <div class="info-area">
-            <h3>The Sands: Bravas</h3>
-            <p>Triple-cooked potatoes with a smoky Mediterranean paprika sauce. A beachside classic.</p>
-        </div>
+   <div class="services-box">
+        <h2>Our Solutions</h2>
+        <ul>
+            <li><strong>Hyper-Realistic 3D Scanning:</strong> Capture signature dishes in stunning detail.</li>
+            <li><strong>Seamless AR Integration:</strong> Life-sized previews directly on the diner's table.</li>
+            <li><strong>Sustainability:</strong> Eliminate paper waste and printing costs forever.</li>
+        </ul>
+    </div>
+
+    <div class="cta-section">
+        <h2>Experience the Future</h2>
+        <p>See how Moloney AR can transform your restaurant. We offer a <strong>FREE live demo</strong> for your signature dish.</p>
+        <a href="mailto:owenbmoloney@gmail.com?subject=Free%20AR%20Demo%20Request" class="btn-demo">Request My Free Demo</a>
     </div>
 
 </div>
