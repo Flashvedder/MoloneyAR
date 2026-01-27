@@ -3,81 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moloney AR | Next-Gen Digital Menus</title>
+    <title>AR Portfolio Desktop</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
 
-<header>
-    <div class="logo">MOLONEY <span>AR</span></div>
-    <div class="contact-info">
-        <a href="tel:+34665265068">+34 665 26 50 68</a><br>
-        <a href="mailto:owenbmoloney@gmail.com">owenbmoloney@gmail.com</a>
-    </div>
-</header>
+<div class="main-wrapper">
 
-<main class="container">
-    <div class="tagline-main">Revolutionizing Dining with Augmented Reality</div>
-    <div class="tagline-sub">The Sustainable, Eco-Friendly Evolution of the Traditional Menu</div>
+    <header class="hero-viewer">
+        <model-viewer src="YOUR_MODEL.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1">
+            <button slot="ar-button" class="floating-ar-btn">View in AR</button>
+        </model-viewer>
+    </header>
 
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/pRSgeZMLmLk?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <div class="menu-card featured">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/Shazan_Burger/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+    <section class="video-area">
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="info-area">
-            <h3>Shazan Signature Burger</h3>
-            <p>Black Angus beef, melted cheddar, caramelized onions, and our secret Shazan sauce.</p>
-        </div>
-    </div>
-    
-    <h2 class="menu-title">Premium Gallery</h2>
+    </section>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/Tapas23_Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+    <section class="bottom-grid">
+        <div class="product-card">
+            <img src="image1.jpg" alt="Description">
+            <div class="button-group">
+                <button class="btn ar-btn">AR VIEW</button>
+                <button class="btn view-3d-btn">3D VIEW</button>
+            </div>
+            <p>Information about this item.</p>
         </div>
-        <div class="info-area">
-            <h3>Tapas 23: Patatas Bravas</h3>
-            <p>Crispy hand-cut potatoes topped with a spicy tomato brava sauce and creamy garlic aioli.</p>
-        </div>
-    </div>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/Durum_Kebab/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+        <div class="product-card">
+            <img src="image2.jpg" alt="Description">
+            <div class="button-group">
+                <button class="btn ar-btn">AR VIEW</button>
+                <button class="btn view-3d-btn">3D VIEW</button>
+            </div>
+            <p>Information about this item.</p>
         </div>
-        <div class="info-area">
-            <h3>Gourmet Durum Kebab</h3>
-            <p>Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread.</p>
-        </div>
-    </div>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/The-Sands-Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+        <div class="product-card">
+            <img src="image3.jpg" alt="Description">
+            <div class="button-group">
+                <button class="btn ar-btn">AR VIEW</button>
+                <button class="btn view-3d-btn">3D VIEW</button>
+            </div>
+            <p>Information about this item.</p>
         </div>
-        <div class="info-area">
-            <h3>The Sands: Bravas</h3>
-            <p>Triple-cooked potatoes with a smoky Mediterranean paprika sauce.</p>
-        </div>
-    </div>
-
-      <div class="services-box">
-        <h2>Our Services</h2>
-        <ul>
-            <li><strong>3D Scanning:</strong> High-fidelity digital replicas of your menu items.</li>
-            <li><strong>AR Integration:</strong> Interactive "View in Room" features for mobile users.</li>
-            <li><strong>Digital Menus:</strong> Modern, fast-loading web experiences for restaurants.</li>
-            <li><strong>Custom UI/UX:</strong> Branded interfaces tailored to your restaurant's identity.</li>
-        </ul>
-    </div>
+    </section>
 
 </div>
 
 </body>
 </html>
-
