@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Portfolio Desktop</title>
+    <title>Your Name | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
@@ -11,11 +11,19 @@
 
 <div class="main-wrapper">
 
-    <header class="hero-viewer">
+    <header class="contact-header">
+        <h1>Your Professional Title</h1>
+        <div class="contact-info">
+            <span>Email: <a href="mailto:you@example.com">you@example.com</a></span>
+            <span>Phone: <a href="tel:+1234567890"> (123) 456-7890</a></span>
+        </div>
+    </header>
+
+    <section class="hero-viewer">
         <model-viewer src="YOUR_MODEL.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1">
             <button slot="ar-button" class="floating-ar-btn">View in AR</button>
         </model-viewer>
-    </header>
+    </section>
 
     <section class="video-area">
         <div class="video-wrapper">
@@ -25,30 +33,30 @@
 
     <section class="bottom-grid">
         <div class="product-card">
-            <img src="image1.jpg" alt="Description">
+            <img src="image1.jpg" alt="Item 1">
             <div class="button-group">
                 <button class="btn ar-btn">AR VIEW</button>
                 <button class="btn view-3d-btn">3D VIEW</button>
             </div>
-            <p>Information about this item.</p>
+            <p>Information about item one.</p>
         </div>
 
         <div class="product-card">
-            <img src="image2.jpg" alt="Description">
+            <img src="image2.jpg" alt="Item 2">
             <div class="button-group">
                 <button class="btn ar-btn">AR VIEW</button>
                 <button class="btn view-3d-btn">3D VIEW</button>
             </div>
-            <p>Information about this item.</p>
+            <p>Information about item two.</p>
         </div>
 
         <div class="product-card">
-            <img src="image3.jpg" alt="Description">
+            <img src="image3.jpg" alt="Item 3">
             <div class="button-group">
                 <button class="btn ar-btn">AR VIEW</button>
                 <button class="btn view-3d-btn">3D VIEW</button>
             </div>
-            <p>Information about this item.</p>
+            <p>Information about item three.</p>
         </div>
     </section>
 
