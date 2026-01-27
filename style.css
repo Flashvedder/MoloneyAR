@@ -16,6 +16,32 @@ body {
     align-items: center;
 }
 
+/* Language Switcher Styles */
+.lang-switch-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #444;
+    color: var(--text-dim);
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lang-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 212, 255, 0.1);
+}
+
 header {
     padding: 40px 20px;
     text-align: center;
@@ -68,7 +94,7 @@ header {
 /* Video Section */
 .video-wrapper {
     width: 100%;
-    padding-bottom: 56.25%; /* Maintains 16:9 ratio */
+    padding-bottom: 56.25%; 
     position: relative;
     background: #111;
     border-radius: 20px;
@@ -102,7 +128,6 @@ header {
     border: 1px solid #222;
 }
 
-/* Adds the blue glow to the first/main card */
 .menu-card.featured { 
     border-color: var(--accent); 
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
