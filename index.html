@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moloney AR | Next-Gen Digital Menus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,84 +17,93 @@
     </div>
 
     <div class="logo">MOLONEY <span>AR</span></div>
-    <div class="contact-info">
-        <a href="tel:+34665265068">+34 665 26 50 68</a><br>
-        <a href="mailto:owenbmoloney@gmail.com">owenbmoloney@gmail.com</a>
+
+    <div class="header-buttons">
+        <a href="https://wa.link/8ac9gb" class="contact-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:owenbmoloney@gmail.com" class="contact-btn email-btn">
+            <i class="fas fa-envelope"></i> Email
+        </a>
     </div>
 </header>
 
 <main class="container">
-    <div class="tagline-main" data-key="tagline-main">Revolutionizing Dining with Augmented Reality</div>
-    <div class="tagline-sub" data-key="tagline-sub">The Sustainable, Eco-Friendly Evolution of the Traditional Menu</div>
+    <section class="intro-section">
+        <div class="tagline-main" data-key="tagline-main">Revolutionizing Dining with Augmented Reality</div>
+        <div class="tagline-sub" data-key="tagline-sub">The Sustainable, Eco-Friendly Evolution of the Traditional Menu</div>
 
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/pRSgeZMLmLk?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-    
-    <section class="ar-card">
-        <h2 data-key="ar-title">Augmented Reality Menus</h2>
-        <p data-key="ar-intro">Using <strong> WebAR</strong> technology, I transform traditional menus into interactive 3D experiences.</p>
-        <ul class="benefit-list">
-            <li data-key="benefit-1"><strong>No App:</strong> Instant access via QR code.</li>
-            <li data-key="benefit-2"><strong>Boost Sales:</strong> 3D visuals drive higher order value.</li>
-            <li data-key="benefit-3"><strong>Confidence:</strong> Shows real portion sizes and textures.</li>
-            <li data-key="benefit-4"><strong>Sustainable:</strong> Zero printing costs, instant digital updates.</li>
-        </ul>
-        <div class="cta-box">
-            <span data-key="demo-offer"><strong>Interested?</strong> I offer a <strong>FREE DEMO</strong> on your table right now.</span>
-        </div>
-    </section>
-
-    <div class="menu-card featured">
-        <div class="viewer-frame-area">
+        <div class="viewer-frame-area main-viewer">
             <iframe src="https://flashvedder.github.io/Shazan_Burger/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
         </div>
-        <div class="info-area">
+        <div class="info-area intro-info">
             <h3 data-key="burger-title">Shazan Signature Burger</h3>
             <p data-key="burger-desc">Black Angus beef, melted cheddar, caramelized onions, and our secret Shazan sauce.</p>
         </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/pRSgeZMLmLk?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <section class="ar-card">
+            <h2 data-key="ar-title">Augmented Reality Menus</h2>
+            <p data-key="ar-intro">Using <strong> WebAR</strong> technology, I transform traditional menus into interactive 3D experiences.</p>
+            <ul class="benefit-list">
+                <li data-key="benefit-1"><strong>No App:</strong> Instant access via QR code.</li>
+                <li data-key="benefit-2"><strong>Boost Sales:</strong> 3D visuals drive higher order value.</li>
+                <li data-key="benefit-3"><strong>Confidence:</strong> Shows real portion sizes and textures.</li>
+                <li data-key="benefit-4"><strong>Sustainable:</strong> Zero printing costs, instant digital updates.</li>
+            </ul>
+            <div class="cta-box">
+                <span data-key="demo-offer"><strong>Interested?</strong> I offer a <strong>FREE DEMO</strong> on your table right now.</span>
+            </div>
+        </section>
+    </section>
+
+    <div class="menu-title-wrapper">
+        <div class="menu-title" data-key="gallery-title">Premium Gallery</div>
     </div>
 
-    <div class="menu-title" data-key="gallery-title">Premium Gallery</div>
+    <div class="main-grid">
+        <div class="menu-card">
+            <div class="viewer-frame-area">
+                <iframe src="https://flashvedder.github.io/Tapas23_Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="info-area">
+                <h3 data-key="bravas1-title">Tapas 23: Patatas Bravas</h3>
+                <p data-key="bravas1-desc">Crispy hand-cut potatoes topped with a spicy tomato brava sauce and creamy garlic aioli.</p>
+            </div>
+        </div>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/Tapas23_Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+        <div class="menu-card">
+            <div class="viewer-frame-area">
+                <iframe src="https://flashvedder.github.io/Durum_Kebab/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="info-area">
+                <h3 data-key="kebab-title">Gourmet Durum Kebab</h3>
+                <p data-key="kebab-desc">Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread.</p>
+            </div>
         </div>
-        <div class="info-area">
-            <h3 data-key="bravas1-title">Tapas 23: Patatas Bravas</h3>
-            <p data-key="bravas1-desc">Crispy hand-cut potatoes topped with a spicy tomato brava sauce and creamy garlic aioli.</p>
-        </div>
-    </div>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/Durum_Kebab/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+        <div class="menu-card">
+            <div class="viewer-frame-area">
+                <iframe src="https://flashvedder.github.io/The-Sands-Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="info-area">
+                <h3 data-key="bravas2-title">The Sands: Bravas</h3>
+                <p data-key="bravas2-desc">Triple-cooked potatoes with a smoky Mediterranean paprika sauce.</p>
+            </div>
         </div>
-        <div class="info-area">
-            <h3 data-key="kebab-title">Gourmet Durum Kebab</h3>
-            <p data-key="kebab-desc">Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread.</p>
-        </div>
-    </div>
 
-    <div class="menu-card">
-        <div class="viewer-frame-area">
-            <iframe src="https://flashvedder.github.io/The-Sands-Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
+        <div class="services-box full-width-service">
+            <h2 data-key="services-title">Our Services</h2>
+            <ul>
+                <li data-key="service1"><strong>3D Scanning:</strong> High-fidelity digital replicas.</li>
+                <li data-key="service2"><strong>AR Integration:</strong> Interactive "View in Room" features.</li>
+                <li data-key="service3"><strong>Digital Menus:</strong> Modern web experiences for restaurants.</li>
+                <li data-key="service4"><strong>Custom UI/UX:</strong> Branded interfaces for your identity.</li>
+            </ul>
         </div>
-        <div class="info-area">
-            <h3 data-key="bravas2-title">The Sands: Bravas</h3>
-            <p data-key="bravas2-desc">Triple-cooked potatoes with a smoky Mediterranean paprika sauce.</p>
-        </div>
-    </div>
-
-    <div class="services-box">
-        <h2 data-key="services-title">Our Services</h2>
-        <ul>
-            <li data-key="service1"><strong>3D Scanning:</strong> High-fidelity digital replicas.</li>
-            <li data-key="service2"><strong>AR Integration:</strong> Interactive "View in Room" features.</li>
-            <li data-key="service3"><strong>Digital Menus:</strong> Modern web experiences for restaurants.</li>
-            <li data-key="service4"><strong>Custom UI/UX:</strong> Branded interfaces for your identity.</li>
-        </ul>
     </div>
 </main>
 
