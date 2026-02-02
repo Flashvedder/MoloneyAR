@@ -1,115 +1,132 @@
+/* --- Global Theme --- */
 :root {
-    --bg-color: #0b0b0b;
+    --bg-dark: #0a0a0a;
     --card-bg: #161616;
-    --accent: #00d4ff; /* Color del logo */
-    --text-main: #ffffff;
-    --text-dim: #a0a0a0;
-    --whatsapp-green: #25D366;
+    --logo-gold: #02d4f9; 
+    --text-light: #f5f5f5;
+    --text-dim: #b3b3b3;
 }
 
 body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* ANIMACIONES */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-header, .main-viewer, .ar-card, .menu-card, .services-box {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* HEADER */
+/* --- Header & Mobile Logic --- */
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Force vertical stack on mobile */
     align-items: center;
-    padding: 100px 20px 40px 20px;
-    text-align: center;
+    padding: 60px 20px 30px;
+    background: #000;
+    border-bottom: 1px solid #222;
     position: relative;
+    gap: 15px; /* Space between logo and buttons */
 }
 
-.header-actions-wrapper {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
+.logo img { 
+    height: 140px; 
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(243, 156, 18, 0.2));
 }
 
-.logo img { height: 150px; margin-bottom: 20px; }
-
-.tagline-main { font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin: 0; }
-.tagline-sub { font-size: 1.1rem; color: var(--text-dim); margin-top: 15px; }
-
-/* BOTONES */
-.header-buttons { display: flex; gap: 10px; }
-.contact-btn {
-    text-decoration: none; padding: 10px 18px; border-radius: 50px;
-    font-weight: bold; font-size: 14px; display: flex; align-items: center; gap: 8px; color: white;
+.lang-switch-container { 
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
 }
-.whatsapp-btn { background: var(--whatsapp-green); }
+
+.lang-btn { 
+    background: #222; 
+    color: #fff; 
+    border: 1px solid #444; 
+    padding: 6px 12px; 
+    cursor: pointer; 
+    border-radius: 6px; 
+    font-size: 0.8rem;
+}
+
+.lang-btn.active { background: var(--logo-gold); color: #000; font-weight: bold; }
+
+.header-buttons { 
+    display: flex; 
+    gap: 12px; 
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-btn { 
+    text-decoration: none; 
+    padding: 12px 20px; 
+    border-radius: 50px; 
+    color: white; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-size: 0.9rem;
+    flex: 0 1 auto; /* Prevents stretching too wide */
+}
+
+.whatsapp-btn { background: #25D366; }
 .email-btn { background: #333; border: 1px solid #444; }
 
-.lang-btn {
-    background: transparent; border: 1px solid #333; color: var(--text-dim);
-    padding: 5px 15px; border-radius: 20px; cursor: pointer;
+/* --- Desktop Layout Overrides --- */
+@media (min-width: 768px) {
+    header { 
+        flex-direction: row; 
+        justify-content: space-between; 
+        height: 140px; 
+        padding: 20px 60px;
+        gap: 0;
+    }
+    .logo { 
+        position: absolute; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+    .header-buttons { 
+        width: auto; 
+        margin-left: auto; 
+    }
 }
-.lang-btn.active { border-color: var(--accent); color: var(--accent); }
 
-/* TARJETA AR PREMIUM */
-.ar-card {
-    background: linear-gradient(145deg, #161616, #0d0d0d);
-    border: 1px solid var(--accent);
-    padding: 40px;
-    border-radius: 24px;
-    margin: 40px 0;
-    text-align: left;
+/* --- Cards & Content --- */
+.highlight-card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
-.ar-card h2 { color: var(--accent); font-size: 1.8rem; margin-bottom: 15px; }
-.ar-intro strong { color: var(--accent); }
 
-.benefit-list { list-style: none; padding: 0; margin: 30px 0; }
-.benefit-list li { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--text-dim); }
-.benefit-list i { color: var(--accent); font-size: 1.2rem; width: 25px; text-align: center; }
-.benefit-list strong { color: var(--text-main); }
+.ar-card { padding: 40px; text-align: left; }
+.ar-intro { font-size: 1.2rem; margin-bottom: 20px; color: var(--text-light); }
+.benefit-list { list-style: none; padding: 0; }
+.benefit-list li { margin: 15px 0; padding-left: 30px; position: relative; font-size: 1.1rem; }
+.benefit-list li::before { content: "✔"; position: absolute; left: 0; color: var(--logo-gold); font-weight: bold; }
 
 .cta-box {
-    background: rgba(0, 212, 255, 0.05);
-    border: 1px dashed var(--accent);
+    margin-top: 30px;
     padding: 20px;
-    border-radius: 15px;
-    text-align: center;
+    background: rgba(243, 156, 18, 0.1);
+    border-left: 4px solid var(--logo-gold);
+    border-radius: 4px;
 }
-.cta-box strong { color: var(--accent); text-transform: uppercase; }
 
-/* GRID Y GALERIA */
-.container { width: 92%; max-width: 1200px; margin: 0 auto; }
-.main-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 50px; }
+/* --- Grid & Services --- */
+.section-title { text-align: center; color: var(--logo-gold); margin: 60px 0 30px; font-size: 2.2rem; }
+.main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.viewer-frame-area { width: 100%; height: 450px; background: #000; }
+.small-viewer { height: 350px; }
+iframe { width: 100%; height: 100%; border: none; }
 
-@media (min-width: 768px) { .main-grid { grid-template-columns: repeat(2, 1fr); } .full-width-service { grid-column: span 2; } }
-@media (min-width: 1100px) { .main-grid { grid-template-columns: repeat(3, 1fr); } .full-width-service { grid-column: span 3; } }
-
-.menu-card { background: var(--card-bg); border-radius: 20px; border: 1px solid #222; overflow: hidden; }
-.viewer-frame-area { height: 350px; }
-.viewer-frame-area iframe { width: 100%; height: 100%; border: none; }
-.info-area { padding: 25px; }
-.info-area h3 { margin: 0 0 10px 0; }
-.info-area p { color: var(--text-dim); font-size: 0.9rem; }
-
-/* SERVICIOS */
-.services-box { padding: 40px; background: #111; border: 1px dashed #444; border-radius: 20px; }
-.services-box h2 { text-align: center; color: var(--accent); margin-bottom: 30px; }
-.services-box ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 0; list-style: none; }
-.services-box li { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; color: var(--text-dim); font-size: 14px; }
-
-.menu-title { font-size: 26px; font-weight: 700; margin: 40px 0 20px 0; border-bottom: 3px solid var(--accent); display: inline-block; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding-bottom: 80px; }
+.service-card { background: #111; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #222; }
+.service-card i { font-size: 2.5rem; color: var(--logo-gold); margin-bottom: 15px; }
+.service-card strong { color: var(--logo-gold); display: block; margin-bottom: 8px; }
