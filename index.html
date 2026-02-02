@@ -31,12 +31,21 @@
     <section class="intro-section">
         <h1 class="tagline-main" data-key="tagline-main"></h1>
         <p class="tagline-sub" data-key="tagline-sub"></p>
-        <div class="viewer-frame-area main-viewer no-card">
-            <iframe class="ar-iframe" src="https://flashvedder.github.io/Shazan_Burger/" allow="xr-spatial-tracking; fullscreen"></iframe>
-        </div>
-        <div class="info-area">
-            <h3 data-key="burger-title"></h3>
-            <p data-key="burger-desc"></p>
+        <div class="hero-flex">
+            <div class="hero-item">
+                <div class="viewer-frame-area no-card">
+                    <iframe class="ar-iframe" src="https://flashvedder.github.io/Shazan_Burger/" allow="xr-spatial-tracking; fullscreen"></iframe>
+                </div>
+                <div class="info-area">
+                    <h3 data-key="burger-title"></h3>
+                    <p data-key="burger-desc"></p>
+                </div>
+            </div>
+            <div class="hero-item">
+                <div class="video-container short-video highlight-card">
+                    <iframe class="ar-iframe" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube Short" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -57,43 +66,38 @@
     <h2 class="section-title" data-key="gallery-title"></h2>
     <div class="main-grid">
         <div class="menu-card highlight-card">
-            <div class="viewer-frame-area small-viewer">
-                <iframe class="ar-iframe" src="https://flashvedder.github.io/Tapas23_Bravas/"></iframe>
-            </div>
-            <div class="info-area">
-                <h3 data-key="bravas1-title"></h3>
-                <p data-key="bravas1-desc"></p>
-            </div>
+            <div class="viewer-frame-area small-viewer"><iframe class="ar-iframe" src="https://flashvedder.github.io/Tapas23_Bravas/"></iframe></div>
+            <div class="info-area"><h3 data-key="bravas1-title"></h3><p data-key="bravas1-desc"></p></div>
         </div>
-
         <div class="menu-card highlight-card">
-            <div class="viewer-frame-area small-viewer">
-                <iframe class="ar-iframe" src="https://flashvedder.github.io/Durum_Kebab/"></iframe>
-            </div>
-            <div class="info-area">
-                <h3 data-key="kebab-title"></h3>
-                <p data-key="kebab-desc"></p>
-            </div>
+            <div class="viewer-frame-area small-viewer"><iframe class="ar-iframe" src="https://flashvedder.github.io/Durum_Kebab/"></iframe></div>
+            <div class="info-area"><h3 data-key="kebab-title"></h3><p data-key="kebab-desc"></p></div>
         </div>
-
         <div class="menu-card highlight-card">
-            <div class="viewer-frame-area small-viewer">
-                <iframe class="ar-iframe" src="https://flashvedder.github.io/The-Sands-Bravas/"></iframe>
-            </div>
-            <div class="info-area">
-                <h3 data-key="bravas2-title"></h3>
-                <p data-key="bravas2-desc"></p>
-            </div>
+            <div class="viewer-frame-area small-viewer"><iframe class="ar-iframe" src="https://flashvedder.github.io/The-Sands-Bravas/"></iframe></div>
+            <div class="info-area"><h3 data-key="bravas2-title"></h3><p data-key="bravas2-desc"></p></div>
         </div>
     </div>
 
     <section class="services-section">
         <h2 class="section-title" data-key="services-title"></h2>
         <div class="services-grid">
-            <div class="service-card"><i class="fas fa-cube"></i><div data-key="service1"></div></div>
-            <div class="service-card"><i class="fas fa-mobile-alt"></i><div data-key="service2"></div></div>
-            <div class="service-card"><i class="fas fa-qrcode"></i><div data-key="service3"></div></div>
-            <div class="service-card"><i class="fas fa-leaf"></i><div data-key="service4"></div></div>
+            <div class="service-card">
+                <i class="fas fa-cube"></i>
+                <div data-key="service1"></div>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <div data-key="service2"></div>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-qrcode"></i>
+                <div data-key="service3"></div>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-leaf"></i>
+                <div data-key="service4"></div>
+            </div>
         </div>
     </section>
 </main>
@@ -113,17 +117,14 @@
             "burger-title": "Hamburguesa Shazan Signature",
             "burger-desc": "Ternera Black Angus, cheddar fundido y cebolla caramelizada.",
             "gallery-title": "La Galería",
-            "bravas1-title": "Tapas 23: Patatas Bravas",
-            "bravas1-desc": "Patatas crujientes con salsa brava.",
-            "kebab-title": "Gourmet Durum Kebab",
-            "kebab-desc": "Carne marinada asada a fuego lento.",
-            "bravas2-title": "The Sands: Bravas",
-            "bravas2-desc": "Patatas en tres tiempos mediterráneas.",
+            "bravas1-title": "Tapas 23: Patatas Bravas", "bravas1-desc": "Patatas crujientes con salsa brava.",
+            "kebab-title": "Gourmet Durum Kebab", "kebab-desc": "Carne marinada asada a fuego lento.",
+            "bravas2-title": "The Sands: Bravas", "bravas2-desc": "Patatas mediterráneas en tres tiempos.",
             "services-title": "Mis Servicios",
-            "service1": "<strong>Escaneo 3D:</strong> Digitalización fotorrealista.",
-            "service2": "<strong>Menús AR Web:</strong> Plataforma interactiva.",
-            "service3": "<strong>QR Inteligentes:</strong> Integración elegante.",
-            "service4": "<strong>Ecosistema Digital:</strong> Menús sostenibles."
+            "service1": "<strong>Escaneo 3D:</strong> Digitalización fotorrealista de alta calidad.",
+            "service2": "<strong>Menús AR Web:</strong> Plataforma interactiva sin descargas.",
+            "service3": "<strong>QR Inteligentes:</strong> Integración física elegante.",
+            "service4": "<strong>Ecosistema Digital:</strong> Menús modernos y autogestionables."
         },
         en: {
             "tagline-main": "Revolutionizing Dining with Augmented Reality",
@@ -135,15 +136,11 @@
             "label-trust": "Trust:", "benefit-3-plain": "Show real portions and textures.",
             "label-flex": "Flexible:", "benefit-4-plain": "QR codes for stickers or table menus.",
             "demo-offer": "Want to see the magic? <span class='cyan-text'>TRY A FREE DEMO</span> right now.",
-            "burger-title": "Shazan Signature Burger",
-            "burger-desc": "Black Angus beef with melted cheddar.",
+            "burger-title": "Shazan Signature Burger", "burger-desc": "Black Angus beef with melted cheddar.",
             "gallery-title": "Gallery",
-            "bravas1-title": "Tapas 23: Patatas Bravas",
-            "bravas1-desc": "Crispy potatoes with spicy sauce.",
-            "kebab-title": "Gourmet Durum Kebab",
-            "kebab-desc": "Slow-roasted marinated meat.",
-            "bravas2-title": "The Sands: Bravas",
-            "bravas2-desc": "Triple-cooked Mediterranean potatoes.",
+            "bravas1-title": "Tapas 23: Patatas Bravas", "bravas1-desc": "Crispy potatoes with spicy sauce.",
+            "kebab-title": "Gourmet Durum Kebab", "kebab-desc": "Slow-roasted marinated meat.",
+            "bravas2-title": "The Sands: Bravas", "bravas2-desc": "Triple-cooked Mediterranean potatoes.",
             "services-title": "My Services",
             "service1": "<strong>3D Scanning:</strong> High-quality digitization.",
             "service2": "<strong>Web AR Menus:</strong> No-app interactive platform.",
