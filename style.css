@@ -10,11 +10,12 @@
 }
 
 .main-logo {
-    height: 50px;       /* Control size here */
-    margin-top: 30px;    /* Control vertical drop here */
+    height: 100px;       /* <--- CHANGE THIS NUMBER to scale the logo */
+    margin-top: 30px;    /* This keeps it lowered from the top */
     width: auto;
     display: block;
     transition: transform 0.3s ease;
+}
 }
 
 .main-logo:hover {
@@ -55,5 +56,6 @@
         margin-left: auto;
     }
 }
+
 
 
