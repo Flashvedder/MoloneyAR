@@ -6,6 +6,65 @@
     <title>Moloney AR | Next-Gen Digital Menus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Header Layout */
+        header {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 20px;
+            padding: 60px 0 40px 0; /* Increased top padding to push everything down */
+            position: relative;
+        }
+
+        /* Logo Size and Position */
+        .logo img {
+            height: 160px;       /* Made it slightly bigger */
+            margin-top: 20px;    /* Pushes the logo down specifically */
+            width: auto;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.1)); /* Optional subtle shadow */
+        }
+
+        .logo img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Language switch stays in the top corner */
+        .lang-switch-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        /* Contact buttons container */
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Desktop specific positioning */
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 80px 0 50px 0;
+            }
+            .logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 40px; /* Lowers the logo on desktop */
+            }
+            .header-buttons {
+                margin-left: auto;
+                margin-top: 0;
+            }
+        }
+    </style>
 </head>
 <body onload="setLanguage('es')"> 
 
@@ -15,7 +74,9 @@
         <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
     </div>
 
-    <div class="logo">MOLONEY <span>AR</span></div>
+    <div class="logo">
+        <img src="https://raw.githubusercontent.com/Flashvedder/MoloneyAR/main/Dish_AR%20logo.webp" alt="Moloney AR Logo">
+    </div>
 
     <div class="header-buttons">
         <a href="https://wa.link/8ac9gb" class="contact-btn whatsapp-btn" target="_blank">
@@ -130,7 +191,7 @@
             "services-title": "Mis Servicios",
             "service1": "<strong>Escaneo 3D de Platos:</strong> Digitalización 3D Fotorrealista. Creamos réplicas digitales exactas de sus platos con texturas y volúmenes reales que despiertan el apetito.",
             "service2": "<strong>Mini Página de Menús AR:</strong> Menú Interactivo Web. Una plataforma personalizada y ligera donde sus clientes exploran toda su carta en Realidad Aumentada sin descargar nada.",
-            "service3": "<strong>Códigos QR Impresos:</strong> Integración Física Inteligente. Diseñamos materiales impresos (identificadores de mesa, volantes) para un acceso inmediato y elegante a la experiencia.",
+            "service3": "<strong>Códigos QR Impresos:</strong> Integración Física Inteligente. Diseñamos materiales impresos (identificadores de mesa, flyers) para un acceso inmediato y elegante a la experiencia.",
             "service4": "<strong>Menús Digitales:</strong> Ecosistema Digital Premium. Menús modernos, sostenibles y autogestionables que se integran perfectamente con la tecnología AR."
         },
         en: {
