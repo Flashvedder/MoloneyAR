@@ -14,11 +14,9 @@
         <button class="lang-btn" id="btn-es" onclick="setLanguage('es')">ES</button>
         <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
     </div>
-
     <div class="logo">
         <img src="https://raw.githubusercontent.com/Flashvedder/MoloneyAR/main/Dish_AR%20logo.webp" alt="Moloney AR Logo">
     </div>
-
     <div class="header-buttons">
         <a href="https://wa.link/8ac9gb" class="contact-btn whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp
@@ -33,9 +31,8 @@
     <section class="intro-section">
         <h1 class="tagline-main" data-key="tagline-main"></h1>
         <p class="tagline-sub" data-key="tagline-sub"></p>
-
-        <div class="viewer-frame-area highlight-card main-viewer">
-            <iframe src="https://flashvedder.github.io/Shazan_Burger/" allow="camera; xr-spatial-tracking; fullscreen"></iframe>
+        <div class="viewer-frame-area main-viewer no-card">
+            <iframe class="ar-iframe" src="https://flashvedder.github.io/Shazan_Burger/" allow="xr-spatial-tracking; fullscreen"></iframe>
         </div>
         <div class="info-area">
             <h3 data-key="burger-title"></h3>
@@ -43,26 +40,25 @@
         </div>
     </section>
 
-    <section class="ar-card highlight-card">
+    <section class="ar-card blueprint-style">
         <h2 data-key="ar-title"></h2>
         <p class="ar-intro" data-key="ar-intro"></p>
-        <ul class="benefit-list">
-            <li data-key="benefit-1"></li>
-            <li data-key="benefit-2"></li>
-            <li data-key="benefit-3"></li>
-            <li data-key="benefit-4"></li>
-        </ul>
-        <div class="cta-box">
+        <div class="benefits-grid">
+            <p><strong data-key="label-apps"></strong> <span data-key="benefit-1-plain"></span></p>
+            <p><strong data-key="label-sales"></strong> <span data-key="benefit-2-plain"></span></p>
+            <p><strong data-key="label-trust"></strong> <span data-key="benefit-3-plain"></span></p>
+            <p><strong data-key="label-flex"></strong> <span data-key="benefit-4-plain"></span></p>
+        </div>
+        <div class="cta-box dashed-border">
             <p data-key="demo-offer"></p>
         </div>
     </section>
 
     <h2 class="section-title" data-key="gallery-title"></h2>
-    
     <div class="main-grid">
         <div class="menu-card highlight-card">
             <div class="viewer-frame-area small-viewer">
-                <iframe src="https://flashvedder.github.io/Tapas23_Bravas/"></iframe>
+                <iframe class="ar-iframe" src="https://flashvedder.github.io/Tapas23_Bravas/"></iframe>
             </div>
             <div class="info-area">
                 <h3 data-key="bravas1-title"></h3>
@@ -72,7 +68,7 @@
 
         <div class="menu-card highlight-card">
             <div class="viewer-frame-area small-viewer">
-                <iframe src="https://flashvedder.github.io/Durum_Kebab/"></iframe>
+                <iframe class="ar-iframe" src="https://flashvedder.github.io/Durum_Kebab/"></iframe>
             </div>
             <div class="info-area">
                 <h3 data-key="kebab-title"></h3>
@@ -82,7 +78,7 @@
 
         <div class="menu-card highlight-card">
             <div class="viewer-frame-area small-viewer">
-                <iframe src="https://flashvedder.github.io/The-Sands-Bravas/"></iframe>
+                <iframe class="ar-iframe" src="https://flashvedder.github.io/The-Sands-Bravas/"></iframe>
             </div>
             <div class="info-area">
                 <h3 data-key="bravas2-title"></h3>
@@ -108,51 +104,51 @@
             "tagline-main": "Revolucionando la gastronomía con la realidad aumentada",
             "tagline-sub": "La evolución sostenible y ecológica del menú tradicional",
             "ar-title": "Cartas en Realidad Aumentada",
-            "ar-intro": "Con tecnología <strong>WebAR</strong>, transformo menús tradicionales en experiencias 3D interactivas.",
-            "benefit-1": "<strong>Sin Apps:</strong> Acceso instantáneo mediante QR.",
-            "benefit-2": "<strong>Más Ventas:</strong> Los platos 3D se ven sabrosos y atraen al cliente.",
-            "benefit-3": "<strong>Confianza:</strong> Muestra raciones y texturas reales.",
-            "benefit-4": "<strong>Flexible:</strong> Los QR se pueden imprimir en pegatinas o menús de mesa.",
-            "demo-offer": "¿Quiere ver la magia en su mesa? <strong>PRUEBE UNA DEMO GRATUITA</strong> ahora mismo.",
+            "ar-intro": "Con tecnología <span class='cyan-text'>WebAR</span>, transformo menús tradicionales en experiencias 3D interactivas.",
+            "label-apps": "Sin Apps:", "benefit-1-plain": "Acceso instantáneo mediante QR.",
+            "label-sales": "Más Ventas:", "benefit-2-plain": "Los platos 3D se ven sabrosos y atraen al cliente.",
+            "label-trust": "Confianza:", "benefit-3-plain": "Muestra raciones y texturas reales.",
+            "label-flex": "Flexible:", "benefit-4-plain": "Los QR se pueden imprimir en pegatinas o menús de mesa.",
+            "demo-offer": "¿Quiere ver la magia en su mesa? <span class='cyan-text'>PRUEBE UNA DEMO GRATUITA</span> ahora mismo.",
             "burger-title": "Hamburguesa Shazan Signature",
-            "burger-desc": "Ternera Black Angus, cheddar fundido, cebolla caramelizada y nuestra salsa secreta Shazan.",
+            "burger-desc": "Ternera Black Angus, cheddar fundido y cebolla caramelizada.",
             "gallery-title": "La Galería",
             "bravas1-title": "Tapas 23: Patatas Bravas",
-            "bravas1-desc": "Patatas crujientes con salsa brava picante y alioli cremoso.",
+            "bravas1-desc": "Patatas crujientes con salsa brava.",
             "kebab-title": "Gourmet Durum Kebab",
-            "kebab-desc": "Carne marinada asada a fuego lento con ensalada fresca.",
+            "kebab-desc": "Carne marinada asada a fuego lento.",
             "bravas2-title": "The Sands: Bravas",
-            "bravas2-desc": "Patatas cocinadas en tres tiempos con salsa de pimentón mediterráneo.",
+            "bravas2-desc": "Patatas en tres tiempos mediterráneas.",
             "services-title": "Mis Servicios",
-            "service1": "<strong>Escaneo 3D:</strong> Digitalización fotorrealista de alta calidad.",
-            "service2": "<strong>Menús AR Web:</strong> Plataforma interactiva sin descargas.",
-            "service3": "<strong>QR Inteligentes:</strong> Integración física elegante.",
-            "service4": "<strong>Ecosistema Digital:</strong> Menús modernos y autogestionables."
+            "service1": "<strong>Escaneo 3D:</strong> Digitalización fotorrealista.",
+            "service2": "<strong>Menús AR Web:</strong> Plataforma interactiva.",
+            "service3": "<strong>QR Inteligentes:</strong> Integración elegante.",
+            "service4": "<strong>Ecosistema Digital:</strong> Menús sostenibles."
         },
         en: {
             "tagline-main": "Revolutionizing Dining with Augmented Reality",
-            "tagline-sub": "The Sustainable, Eco-Friendly Evolution of the Traditional Menu",
+            "tagline-sub": "The Sustainable evolution of the traditional menu",
             "ar-title": "Augmented Reality Menus",
-            "ar-intro": "Using <strong>WebAR</strong> technology, I transform traditional menus into interactive 3D experiences.",
-            "benefit-1": "<strong>No Apps:</strong> Guests open it instantly with a QR code.",
-            "benefit-2": "<strong>Boost Sales:</strong> 3D dishes look tasty and give customers a great experience.",
-            "benefit-3": "<strong>Build Trust:</strong> Show real portions and textures before they order.",
-            "benefit-4": "<strong>Easy Printing:</strong> QR codes for stickers or table-top mini menus.",
-            "demo-offer": "Want to see the magic at your table? <strong>TRY A FREE DEMO</strong> right now.",
+            "ar-intro": "Using <span class='cyan-text'>WebAR</span> technology, I transform menus into 3D experiences.",
+            "label-apps": "No Apps:", "benefit-1-plain": "Instant access via QR code.",
+            "label-sales": "Boost Sales:", "benefit-2-plain": "3D dishes look tasty and attract customers.",
+            "label-trust": "Trust:", "benefit-3-plain": "Show real portions and textures.",
+            "label-flex": "Flexible:", "benefit-4-plain": "QR codes for stickers or table menus.",
+            "demo-offer": "Want to see the magic? <span class='cyan-text'>TRY A FREE DEMO</span> right now.",
             "burger-title": "Shazan Signature Burger",
-            "burger-desc": "Black Angus beef, melted cheddar, and caramelized onions.",
+            "burger-desc": "Black Angus beef with melted cheddar.",
             "gallery-title": "Gallery",
             "bravas1-title": "Tapas 23: Patatas Bravas",
-            "bravas1-desc": "Crispy hand-cut potatoes with spicy brava sauce.",
+            "bravas1-desc": "Crispy potatoes with spicy sauce.",
             "kebab-title": "Gourmet Durum Kebab",
-            "kebab-desc": "Slow-roasted marinated meat with fresh salad.",
+            "kebab-desc": "Slow-roasted marinated meat.",
             "bravas2-title": "The Sands: Bravas",
-            "bravas2-desc": "Triple-cooked potatoes with smoky paprika.",
+            "bravas2-desc": "Triple-cooked Mediterranean potatoes.",
             "services-title": "My Services",
-            "service1": "<strong>3D Scanning:</strong> High-quality photorealistic digitization.",
-            "service2": "<strong>Web AR Menus:</strong> Interactive platform, no apps required.",
-            "service3": "<strong>Smart QR:</strong> Elegant and functional physical integration.",
-            "service4": "<strong>Digital Ecosystem:</strong> Sustainable, self-managed menus."
+            "service1": "<strong>3D Scanning:</strong> High-quality digitization.",
+            "service2": "<strong>Web AR Menus:</strong> No-app interactive platform.",
+            "service3": "<strong>Smart QR:</strong> Elegant physical integration.",
+            "service4": "<strong>Digital Ecosystem:</strong> Modern self-managed menus."
         }
     };
 
