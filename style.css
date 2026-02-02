@@ -1,61 +1,207 @@
-/* Header and Logo Positioning */
-.main-header {
+/* --- Variables & Reset --- */
+:root {
+    --primary-color: #2d3436;
+    --accent-color: #0984e3;
+    --whatsapp-green: #25D366;
+    --bg-color: #fcfcfc;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header Section --- */
+header {
     display: flex;
     flex-direction: column; 
     align-items: center;
     gap: 20px;
-    padding: 60px 0 40px 0; /* Space at top of page */
+    padding: 40px 20px;
     position: relative;
-    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-.main-logo {
-    height: 100px;       /* <--- CHANGE THIS NUMBER to scale the logo */
-    margin-top: 30px;    /* This keeps it lowered from the top */
+.logo img {
+    height: 140px;
     width: auto;
-    display: block;
     transition: transform 0.3s ease;
 }
-}
 
-.main-logo:hover {
+.logo img:hover {
     transform: scale(1.05);
 }
 
-/* Language Switch Position */
 .lang-switch-container {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 10;
 }
 
-/* Buttons Container */
+.lang-btn {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 6px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.lang-btn.active {
+    background: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+}
+
 .header-buttons {
     display: flex;
     gap: 15px;
-    justify-content: center;
 }
 
-/* Desktop Styles */
+.contact-btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.whatsapp-btn { background-color: var(--whatsapp-green); }
+.email-btn { background-color: var(--primary-color); }
+.contact-btn:hover { opacity: 0.85; }
+
+/* --- Hero & Intro --- */
+.intro-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.tagline-main {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.tagline-sub {
+    font-size: 1.25rem;
+    color: #636e72;
+    margin-bottom: 50px;
+}
+
+.viewer-frame-area {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: var(--card-shadow);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Features Card --- */
+.ar-card {
+    background: #fff;
+    padding: 50px;
+    border-radius: 24px;
+    margin: 60px 0;
+    box-shadow: var(--card-shadow);
+}
+
+.benefit-list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.benefit-list li {
+    margin: 15px 0;
+    padding-left: 35px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.benefit-list li::before {
+    content: "\f058"; /* FontAwesome check-circle */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* --- Gallery Grid --- */
+.menu-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding-bottom: 100px;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.menu-card .viewer-frame-area {
+    height: 350px;
+    border-radius: 0;
+}
+
+.info-area {
+    padding: 25px;
+}
+
+/* --- Desktop Layout Adjustments --- */
 @media (min-width: 768px) {
-    .main-header {
+    header {
         flex-direction: row;
         justify-content: space-between;
-        padding: 80px 0 60px 0;
+        padding: 30px 60px;
+        height: 180px;
     }
     
-    .logo-container {
+    .logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 20px; /* Adjust this to move logo down in desktop view */
     }
 
     .header-buttons {
         margin-left: auto;
     }
 }
-
-
-
