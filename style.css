@@ -10,7 +10,7 @@
 }
 
 .main-logo {
-    height: 120px;       /* Control size here */
+    height: 50px;       /* Control size here */
     margin-top: 30px;    /* Control vertical drop here */
     width: auto;
     display: block;
@@ -55,4 +55,5 @@
         margin-left: auto;
     }
 }
+
 
