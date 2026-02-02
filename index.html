@@ -10,83 +10,106 @@
 <body onload="setLanguage('es')"> 
 
 <header>
-    <div class="lang-switch-container">
-        <button class="lang-btn" id="btn-es" onclick="setLanguage('es')">ES</button>
-        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+    <div class="header-actions-wrapper">
+        <div class="lang-switch-container">
+            <button class="lang-btn active" id="btn-es" onclick="setLanguage('es')">ES</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <div class="header-buttons">
+            <a href="https://wa.link/8ac9gb" class="contact-btn whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:owenbmoloney@gmail.com" class="contact-btn email-btn">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+        </div>
     </div>
 
     <div class="logo">
         <img src="https://raw.githubusercontent.com/Flashvedder/MoloneyAR/main/Dish_AR%20logo.webp" alt="Moloney AR Logo">
     </div>
 
-    <div class="header-buttons">
-        <a href="https://wa.link/8ac9gb" class="contact-btn whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="mailto:owenbmoloney@gmail.com" class="contact-btn email-btn">
-            <i class="fas fa-envelope"></i> Email
-        </a>
+    <div class="tagline-container">
+        <h1 class="tagline-main" data-key="tagline-main">Revolucionando la gastronomía con la realidad aumentada</h1>
+        <p class="tagline-sub" data-key="tagline-sub">La evolución sostenible y ecológica del menú tradicional</p>
     </div>
 </header>
 
 <main class="container">
     <section class="intro-section">
-        <h1 class="tagline-main" data-key="tagline-main"></h1>
-        <p class="tagline-sub" data-key="tagline-sub"></p>
-
         <div class="viewer-frame-area main-viewer">
-            <iframe src="https://flashvedder.github.io/Shazan_Burger/" allow="camera; xr-spatial-tracking; fullscreen"></iframe>
+            <iframe src="https://flashvedder.github.io/Shazan_Burger/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
         </div>
-        <div class="info-area">
-            <h3 data-key="burger-title"></h3>
-            <p data-key="burger-desc"></p>
+        
+        <div class="info-area intro-info">
+            <h3 data-key="burger-title">Hamburguesa Shazan Signature</h3>
+            <p data-key="burger-desc">Ternera Black Angus, cheddar fundido, cebolla caramelizada y nuestra salsa secreta Shazan.</p>
         </div>
-    </section>
 
-    <section class="ar-card">
-        <h2 data-key="ar-title"></h2>
-        <p data-key="ar-intro"></p>
-        <ul class="benefit-list">
-            <li data-key="benefit-1"></li>
-            <li data-key="benefit-2"></li>
-            <li data-key="benefit-3"></li>
-            <li data-key="benefit-4"></li>
-        </ul>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/pRSgeZMLmLk?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <section class="ar-card">
+            <h2 data-key="ar-title">Cartas en Realidad Aumentada</h2>
+            <p class="ar-intro" data-key="ar-intro">Con tecnología <strong>WebAR</strong>, transformo menús tradicionales en experiencias 3D interactivas.</p>
+            
+            <ul class="benefit-list">
+                <li><i class="fas fa-mobile-alt"></i> <span data-key="benefit-1"><strong>Sin Apps:</strong> Acceso instantáneo mediante QR.</span></li>
+                <li><i class="fas fa-chart-line"></i> <span data-key="benefit-2"><strong>Más Ventas:</strong> Los platos 3D se ven sabrosos y atraen al cliente.</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-key="benefit-3"><strong>Confianza:</strong> Muestra raciones y texturas reales.</span></li>
+                <li><i class="fas fa-print"></i> <span data-key="benefit-4"><strong>Flexible:</strong> Los QR se pueden imprimir en pegatinas o menús de mesa.</span></li>
+            </ul>
+
+            <div class="cta-box">
+                <p data-key="demo-offer">¿Quiere ver la magia en su mesa? <strong>PRUEBE UNA DEMO GRATUITA</strong> ahora mismo.</p>
+            </div>
+        </section>
     </section>
 
     <div class="menu-title-wrapper">
-        <h2 class="menu-title" data-key="gallery-title"></h2>
+        <div class="menu-title" data-key="gallery-title">La Galería</div>
     </div>
 
     <div class="main-grid">
         <div class="menu-card">
             <div class="viewer-frame-area">
-                <iframe src="https://flashvedder.github.io/Tapas23_Bravas/"></iframe>
+                <iframe src="https://flashvedder.github.io/Tapas23_Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
             </div>
             <div class="info-area">
-                <h3 data-key="bravas1-title"></h3>
-                <p data-key="bravas1-desc"> </p>
+                <h3 data-key="bravas1-title">Tapas 23: Patatas Bravas</h3>
+                <p data-key="bravas1-desc">Patatas cortadas a mano crujientes con salsa brava picante y alioli cremoso.</p>
             </div>
         </div>
 
         <div class="menu-card">
             <div class="viewer-frame-area">
-                <iframe src="https://flashvedder.github.io/Durum_Kebab/"></iframe>
+                <iframe src="https://flashvedder.github.io/Durum_Kebab/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
             </div>
             <div class="info-area">
-                <h3 data-key="kebab-title"></h3>
-                <p data-key="kebab-desc"></p>
+                <h3 data-key="kebab-title">Gourmet Durum Kebab</h3>
+                <p data-key="kebab-desc">Carne marinada asada a fuego lento con ensalada fresca, envuelta en pan plano artesanal.</p>
             </div>
         </div>
 
         <div class="menu-card">
             <div class="viewer-frame-area">
-                <iframe src="https://flashvedder.github.io/The-Sands-Bravas/"></iframe>
+                <iframe src="https://flashvedder.github.io/The-Sands-Bravas/" allow="camera; xr-spatial-tracking; fullscreen" allowfullscreen></iframe>
             </div>
             <div class="info-area">
-                <h3 data-key="bravas2-title"></h3>
-                <p data-key="bravas2-desc"></p>
+                <h3 data-key="bravas2-title">The Sands: Bravas</h3>
+                <p data-key="bravas2-desc">Patatas cocinadas en tres tiempos con salsa de pimentón mediterráneo ahumado.</p>
             </div>
+        </div>
+
+        <div class="services-box full-width-service">
+            <h2 data-key="services-title">Mis Servicios</h2>
+            <ul>
+                <li data-key="service1"></li>
+                <li data-key="service2"></li>
+                <li data-key="service3"></li>
+                <li data-key="service4"></li>
+            </ul>
         </div>
     </div>
 </main>
@@ -102,6 +125,7 @@
             "benefit-2": "<strong>Más Ventas:</strong> Los platos 3D se ven sabrosos y atraen al cliente.",
             "benefit-3": "<strong>Confianza:</strong> Muestra raciones y texturas reales.",
             "benefit-4": "<strong>Flexible:</strong> Los QR se pueden imprimir en pegatinas o menús de mesa.",
+            "demo-offer": "¿Quiere ver la magia en su mesa? <strong>PRUEBE UNA DEMO GRATUITA</strong> ahora mismo.",
             "burger-title": "Hamburguesa Shazan Signature",
             "burger-desc": "Ternera Black Angus, cheddar fundido, cebolla caramelizada y nuestra salsa secreta Shazan.",
             "gallery-title": "La Galería",
@@ -110,7 +134,12 @@
             "kebab-title": "Gourmet Durum Kebab",
             "kebab-desc": "Carne marinada asada a fuego lento con ensalada fresca, envuelta en pan plano artesanal.",
             "bravas2-title": "The Sands: Bravas",
-            "bravas2-desc": "Patatas cocinadas en tres tiempos con salsa de pimentón mediterráneo ahumado."
+            "bravas2-desc": "Patatas cocinadas en tres tiempos con salsa de pimentón mediterráneo ahumado.",
+            "services-title": "Mis Servicios",
+            "service1": "<strong>Escaneo 3D de Platos:</strong> Digitalización 3D Fotorrealista.",
+            "service2": "<strong>Mini Página de Menús AR:</strong> Menú Interactivo Web.",
+            "service3": "<strong>Códigos QR Impresos:</strong> Integración Física Inteligente.",
+            "service4": "<strong>Menús Digitales:</strong> Ecosistema Digital Premium."
         },
         en: {
             "tagline-main": "Revolutionizing Dining with Augmented Reality",
@@ -121,6 +150,7 @@
             "benefit-2": "<strong>Boost Sales:</strong> 3D dishes look tasty and give customers a great experience.",
             "benefit-3": "<strong>Build Trust:</strong> Show real portions and textures before they order.",
             "benefit-4": "<strong>Easy Printing:</strong> QR codes for stickers or table-top mini menus.",
+            "demo-offer": "Want to see the magic at your table? <strong>TRY A FREE DEMO</strong> right now",
             "burger-title": "Shazan Signature Burger",
             "burger-desc": "Black Angus beef, melted cheddar, caramelized onions, and our secret Shazan sauce.",
             "gallery-title": "Gallery",
@@ -129,7 +159,12 @@
             "kebab-title": "Gourmet Durum Kebab",
             "kebab-desc": "Slow-roasted marinated meat with fresh salad, wrapped in a handmade flatbread.",
             "bravas2-title": "The Sands: Bravas",
-            "bravas2-desc": "Triple-cooked potatoes with a smoky Mediterranean paprika sauce."
+            "bravas2-desc": "Triple-cooked potatoes with a smoky Mediterranean paprika sauce.",
+            "services-title": "My Services",
+            "service1": "<strong>3D Dish Scanning:</strong> Photorealistic 3D digitization.",
+            "service2": "<strong>Mini AR Menu Pages:</strong> Interactive Web Menu.",
+            "service3": "<strong>Printed QR Codes:</strong> Smart Physical Integration.",
+            "service4": "<strong>Digital Menus:</strong> Premium Digital Ecosystem."
         }
     };
 
@@ -140,9 +175,9 @@
                 elem.innerHTML = translations[lang][key];
             }
         });
-
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.id === `btn-${lang}`);
+            btn.classList.remove('active');
+            if(btn.id === `btn-${lang}`) btn.classList.add('active');
         });
     }
 </script>
