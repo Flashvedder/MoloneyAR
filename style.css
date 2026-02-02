@@ -1,132 +1,54 @@
-/* --- Global Theme --- */
 :root {
     --bg-dark: #0a0a0a;
     --card-bg: #161616;
-    --logo-gold: #02d4f9; 
+    --cyan-accent: #00aeef;
     --text-light: #f5f5f5;
-    --text-dim: #b3b3b3;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-}
-
+body { background-color: var(--bg-dark); color: var(--text-light); font-family: 'Segoe UI', sans-serif; margin: 0; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* --- Header & Mobile Logic --- */
-header {
-    display: flex;
-    flex-direction: column; /* Force vertical stack on mobile */
-    align-items: center;
-    padding: 60px 20px 30px;
-    background: #000;
-    border-bottom: 1px solid #222;
-    position: relative;
-    gap: 15px; /* Space between logo and buttons */
-}
+/* --- FIX: White Frame Removal --- */
+.ar-iframe { width: 100%; height: 100%; border: none !important; display: block; background: transparent; }
 
-.logo img { 
-    height: 140px; 
-    width: auto;
-    filter: drop-shadow(0 0 10px rgba(243, 156, 18, 0.2));
-}
-
-.lang-switch-container { 
-    position: absolute; 
-    top: 15px; 
-    right: 15px; 
-}
-
-.lang-btn { 
-    background: #222; 
-    color: #fff; 
-    border: 1px solid #444; 
-    padding: 6px 12px; 
-    cursor: pointer; 
-    border-radius: 6px; 
-    font-size: 0.8rem;
-}
-
-.lang-btn.active { background: var(--logo-gold); color: #000; font-weight: bold; }
-
-.header-buttons { 
-    display: flex; 
-    gap: 12px; 
-    width: 100%;
-    justify-content: center;
-}
-
-.contact-btn { 
-    text-decoration: none; 
-    padding: 12px 20px; 
-    border-radius: 50px; 
-    color: white; 
-    font-weight: bold; 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-    font-size: 0.9rem;
-    flex: 0 1 auto; /* Prevents stretching too wide */
-}
-
+/* --- Header Mobile Adjustments --- */
+header { display: flex; flex-direction: column; align-items: center; padding: 60px 20px 30px; background: #000; border-bottom: 1px solid #222; position: relative; gap: 20px; }
+.logo img { height: 140px; }
+.header-buttons { display: flex; gap: 12px; width: 100%; justify-content: center; }
+.contact-btn { text-decoration: none; padding: 12px 20px; border-radius: 50px; color: white; font-weight: bold; display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
 .whatsapp-btn { background: #25D366; }
-.email-btn { background: #333; border: 1px solid #444; }
+.email-btn { background: #333; }
 
-/* --- Desktop Layout Overrides --- */
 @media (min-width: 768px) {
-    header { 
-        flex-direction: row; 
-        justify-content: space-between; 
-        height: 140px; 
-        padding: 20px 60px;
-        gap: 0;
-    }
-    .logo { 
-        position: absolute; 
-        left: 50%; 
-        transform: translateX(-50%); 
-    }
-    .header-buttons { 
-        width: auto; 
-        margin-left: auto; 
-    }
+    header { flex-direction: row; justify-content: space-between; height: 140px; }
+    .logo { position: absolute; left: 50%; transform: translateX(-50%); }
+    .header-buttons { width: auto; margin-left: auto; }
 }
 
-/* --- Cards & Content --- */
-.highlight-card {
-    background: var(--card-bg);
-    border: 1px solid #333;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
+/* --- Blueprint Style --- */
+.blueprint-style { background: var(--bg-dark); border: 1.5px solid var(--cyan-accent); border-radius: 30px; padding: 45px; margin: 40px 0; }
+.blueprint-style h2 { color: var(--cyan-accent); font-size: 2.2rem; margin-top: 0; }
+.cyan-text { color: var(--cyan-accent); font-weight: bold; }
+.benefits-grid p { margin: 15px 0; font-size: 1.1rem; }
+.benefits-grid strong { font-weight: 800; color: white; }
+.benefits-grid span { color: #a0a0a0; }
+.cta-box.dashed-border { margin-top: 40px; padding: 25px; background: rgba(0, 174, 239, 0.03); border: 1.5px dashed var(--cyan-accent); border-radius: 15px; text-align: center; }
 
-.ar-card { padding: 40px; text-align: left; }
-.ar-intro { font-size: 1.2rem; margin-bottom: 20px; color: var(--text-light); }
-.benefit-list { list-style: none; padding: 0; }
-.benefit-list li { margin: 15px 0; padding-left: 30px; position: relative; font-size: 1.1rem; }
-.benefit-list li::before { content: "✔"; position: absolute; left: 0; color: var(--logo-gold); font-weight: bold; }
+/* --- Gallery Grid & Highlight Cards --- */
+.section-title { text-align: center; color: var(--cyan-accent); margin: 60px 0 30px; font-size: 2.2rem; }
+.main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.highlight-card { background: var(--card-bg); border: 1px solid #333; border-radius: 20px; overflow: hidden; transition: border-color 0.3s; }
+.highlight-card:hover { border-color: var(--cyan-accent); }
 
-.cta-box {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(243, 156, 18, 0.1);
-    border-left: 4px solid var(--logo-gold);
-    border-radius: 4px;
-}
-
-/* --- Grid & Services --- */
-.section-title { text-align: center; color: var(--logo-gold); margin: 60px 0 30px; font-size: 2.2rem; }
-.main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-.viewer-frame-area { width: 100%; height: 450px; background: #000; }
+.viewer-frame-area { width: 100%; height: 450px; background: #000; overflow: hidden; }
 .small-viewer { height: 350px; }
-iframe { width: 100%; height: 100%; border: none; }
+.info-area { padding: 25px; }
+.info-area h3 { margin-top: 0; color: white; font-size: 1.3rem; }
+.info-area p { color: #bbb; margin-bottom: 0; }
+.no-card { background: transparent !important; border: none !important; }
 
+/* --- Services --- */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding-bottom: 80px; }
-.service-card { background: #111; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #222; }
-.service-card i { font-size: 2.5rem; color: var(--logo-gold); margin-bottom: 15px; }
-.service-card strong { color: var(--logo-gold); display: block; margin-bottom: 8px; }
+.service-card { background: #111; padding: 25px; border-radius: 15px; text-align: center; border: 1px solid #222; }
+.service-card i { font-size: 2rem; color: var(--cyan-accent); margin-bottom: 10px; }
+.service-card strong { color: var(--cyan-accent); display: block; margin-bottom: 5px; }
